@@ -16,7 +16,7 @@ export async function POST(
     });
 
     if (!authorBlog) {
-      return new NextResponse("Unauthorized", { status: 401 });
+      return new NextResponse("Not found", { status: 404 });
     }
 
     const attachment = await db.attachment.create({

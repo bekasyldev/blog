@@ -8,14 +8,14 @@ export async function DELETE(
 ) {
   try {
 
-    const blogAuthor = await db.blog.findUnique({
+    const blog = await db.blog.findUnique({
       where: {
         id: params.blogId,
       }
     });
 
-    if (!blogAuthor) {
-      return new NextResponse("Unauthorized", { status: 401 });
+    if (!blog) {
+      return new NextResponse("Not found", { status: 404 });
     }
 
     const attachment = await db.attachment.delete({
