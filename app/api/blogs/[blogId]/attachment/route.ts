@@ -9,13 +9,13 @@ export async function POST(
   try {
     const { url } = await req.json();
 
-    const authorBlog = await db.blog.findUnique({
+    const blogAuthor = await db.blog.findUnique({
       where: {
         id: params.blogId,
       }
     });
 
-    if (!authorBlog) {
+    if (!blogAuthor) {
       return new NextResponse("Not found", { status: 404 });
     }
 
