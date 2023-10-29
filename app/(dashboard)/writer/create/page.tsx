@@ -47,11 +47,11 @@ const CreateBlog = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto flex items-center justify-center h-full mt-10 ">
-      <div className="space-y-3 ">
-        <h1 className="text-2xl">Name your course</h1>
-        <p className="text-sm text-slate-300">
-          What would you like to name your course? Don&apos;t worry, you can
+    <div className="max-w-5xl mx-auto flex items-center justify-center h-full mt-10 text-black">
+      <div className="space-y-3 p-10 rounded-md bg-white">
+        <h1 className="text-2xl">Title of your blog</h1>
+        <p className="text-sm text-slate-700">
+          What would you like to name your blog? Don&apos;t worry, you can
           change this later.
         </p>
         <Form {...form}>
@@ -64,7 +64,7 @@ const CreateBlog = () => {
               name="title"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Course title</FormLabel>
+                  <FormLabel>Blog title</FormLabel>
                   <FormControl>
                     <Input
                       className="text-black"
@@ -74,7 +74,7 @@ const CreateBlog = () => {
                     />
                   </FormControl>
                   <FormDescription>
-                    What will you teach in this course?
+                    What will you provide in this blog?
                   </FormDescription>
                   <FormMessage />
                 </FormItem>

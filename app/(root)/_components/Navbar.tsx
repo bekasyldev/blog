@@ -29,8 +29,15 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="lg:flex lg:items-center hidden">
-        <Button className="bg-white text-slate-950">Subcribe</Button>
+      <div className="lg:flex lg:items-center hidden space-x-3">
+        <Link href={"/writer/create"}>
+          <Button className="bg-green-500 hover:bg-green-700 text-white">
+            Write a blog
+          </Button>
+        </Link>
+        <Button className="bg-white hover:bg-slate-500 hover:text-white  text-slate-950">
+          Subcribe
+        </Button>
       </div>
 
       <Menu

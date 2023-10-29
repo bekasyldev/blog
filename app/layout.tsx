@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-slate-800 text-white`}>
+      <body className={`${inter.className} bg-slate-900 text-white`}>
         <ToastProvider />
         <Navbar />
         {children}

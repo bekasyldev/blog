@@ -1,13 +1,11 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
+import Hero from "@/components/Hero";
+import Posts from "@/components/Posts";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <Link href={"/writer/create"}>
-        <Button className="bg-black text-white">Write a blog</Button>
-      </Link>
-    </main>
+    <>
+      <Hero />
+      <Posts />
+    </>
   );
 }
