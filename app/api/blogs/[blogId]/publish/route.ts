@@ -18,7 +18,12 @@ export async function PATCH(
       return new NextResponse("Not found", { status: 404 });
     }
 
-    const publishBlog = await db.blog.update({
+
+    if (!blog.title || !blog.description || !blog.imageUrl || !blog.categoryId) {
+      return new NextResponse("Missing required fields", { status: 401 });
+    }
+
+    const publishedBlog = await db.blog.update({
       where: {
         id: params.blogId,
       },
@@ -27,9 +32,9 @@ export async function PATCH(
       }
     });
 
-    return NextResponse.json(publishBlog);
+    return NextResponse.json(publishedBlog);
   } catch (error) {
-    console.log("[BLOG_ID_PUBLISH]", error);
+    console.log("[COURSE_ID_PUBLISH]", error);
     return new NextResponse("Internal Error", { status: 500 });
   } 
 }
