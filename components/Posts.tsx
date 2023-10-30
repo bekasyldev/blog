@@ -17,20 +17,20 @@ const Blogs = async () => {
         {blogs.map((blog) => (
           <div
             key={blog.id}
-            className="flex flex-row justify-start items-center gap-3 my-5"
+            className="flex flex-col md:flex-row justify-start items-center gap-3 my-5"
           >
             {blog.imageUrl !== null && (
               <Image
-                className="flex w-[200px] h-[120px]"
+                className="flex w-[280px] h-[140px] md:w-[200px] md:h-[120px]"
                 src={blog.imageUrl}
                 alt={blog.title}
                 width={100}
                 height={100}
               />
             )}
-            <div className="h-full space-y-5">
+            <div className="h-full space-y-2 md:space-y-5">
               <h2 className="text-lg font-semibold">{blog.title}</h2>
-              <p>{blog.description}</p>
+              <p className="text-sm md:text-md">{blog.description}</p>
               <span></span>
             </div>
           </div>

@@ -20,7 +20,11 @@ const Navbar = () => {
       </Link>
 
       <ul
-        className={cn("hidden h-full gap-4 lg:flex", isOpen && "h-full gap-4")}
+        className={cn(
+          isOpen
+            ? "flex flex-col h-screen w-full gap-4 bg-black text-white"
+            : "hidden"
+        )}
       >
         {navLinks.map((link) => (
           <Link href={link.href} key={link.key} className="text-md">
