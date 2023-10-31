@@ -62,8 +62,8 @@ export const AttachmentForm = ({
           {isEditing && <>Cancel</>}
           {!isEditing && (
             <>
-              <PlusCircle className="h-4 w-4 mr-2" />
-              Add a file
+              <PlusCircle className="h-4 w-4 sm:mr-2" />
+              <span className="hidden sm:flex">Add a file</span>
             </>
           )}
         </Button>

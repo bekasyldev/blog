@@ -3,7 +3,7 @@ import { Input } from "./ui/input";
 
 const Hero = () => {
   return (
-    <div className="flex justify-center items-center h-[70vh] flex-col gap-6">
+    <div className="flex justify-center items-center h-[70vh] flex-col gap-10">
       <h1 className="xl:text-4xl text-xl md:text-2xl font-2xl text-center">
         Join me on a behind-the-scenes coding <br />
         journey. Weekly updates on projects, <br />

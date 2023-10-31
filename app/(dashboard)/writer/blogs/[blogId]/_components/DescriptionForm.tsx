@@ -67,8 +67,8 @@ const DescriptionForm = ({ initialData, blogId }: DescriptionProps) => {
             <>Cancel</>
           ) : (
             <>
-              <Pencil className="h-4 w-4 mr-2" />
-              Edit description
+              <Pencil className="h-4 w-4 sm:mr-2" />
+              <span className="hidden sm:flex">Edit description</span>
             </>
           )}
         </Button>

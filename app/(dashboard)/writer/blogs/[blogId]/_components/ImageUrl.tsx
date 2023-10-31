@@ -2,7 +2,7 @@
 
 import * as z from "zod";
 import axios from "axios";
-import { Pencil, PlusCircle, ImageIcon } from "lucide-react";
+import { PlusCircle, ImageIcon } from "lucide-react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
@@ -55,8 +55,8 @@ export default function ImageForm({ initialData, blogId }: ImageFormProps) {
           )}
           {!isEditing && initialData.imageUrl && (
             <>
-              <Pencil className="h-4 w-4 mr-2" />
-              Edit image
+              <PlusCircle className="h-4 w-4 sm:mr-2" />
+              <span className="hidden sm:flex">Edit image</span>
             </>
           )}
         </Button>

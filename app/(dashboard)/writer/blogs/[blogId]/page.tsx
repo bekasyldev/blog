@@ -55,10 +55,10 @@ const BlogIdPage = async ({ params }: { params: { blogId: string } }) => {
           <Banner label="This blog is unpushlished. It would be not visible to others." />
         </div>
       )}
-      <div className="py-10 px-20">
+      <div className="py-10 px-10 sm:px-20">
         <div className="flex items-center justify-between">
           <div className="flex flex-col gap-y-2">
-            <h1 className="text-3xl font-medium">Blog Setup</h1>
+            <h1 className="sm:text-3xl text-2xl font-medium">Blog Setup</h1>
             <span>Complete all fields {complextedText}</span>
           </div>
           <Actions

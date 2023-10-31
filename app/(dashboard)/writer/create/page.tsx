@@ -40,18 +40,20 @@ const CreateBlog = () => {
     try {
       const response = await axios.post("/api/blogs", values);
       router.push(`/writer/blogs/${response.data.id}`);
-      toast.success("Course created");
+      toast.success("Blog created");
     } catch (error) {
       toast.error("Somethign went wrong");
     }
   };
 
   return (
-    <div className="max-w-5xl mx-auto flex items-center justify-center h-full mt-10 text-black">
-      <div className="space-y-3 p-10 rounded-md bg-white">
-        <h1 className="text-2xl">Title of your blog</h1>
+    <div className="max-w-5xl md:mx-auto flex items-center justify-center h-full mt-10 text-black">
+      <div className="space-y-3 bg-white p-5 rounded-md mx-10 md:mx-auto">
+        <h1 className="sm:text-2xl text-xl font-semibold">
+          Title of your blog
+        </h1>
         <p className="text-sm text-slate-700">
-          What would you like to name your blog? Don&apos;t worry, you can
+          What would you like to name your course? Don&apos;t worry, you can
           change this later.
         </p>
         <Form {...form}>

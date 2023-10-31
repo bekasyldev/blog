@@ -60,7 +60,7 @@ export const Actions = ({ disabled, blogId, isPublished }: ActionsProps) => {
   };
 
   return (
-    <div className="flex items-center gap-x-2 ">
+    <div className="flex flex-col sm:flex-row items-center gap-2 ">
       <Button
         className="bg-white text-black hover:bg-slate-600"
         onClick={onClick}

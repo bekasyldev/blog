@@ -13,7 +13,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="flex justify-between items-center mx-auto max-w-[1440px] relative py-5 px-6 lg:px-20 3xl:px-0">
+    <nav className="max-w-[1440px] flex justify-between items-center mx-auto relative py-5 px-6 lg:px-20 3xl:px-0">
       <Link href={"/"} className="flex">
         <Image src={"/cat.png"} alt="logo" width={40} height={40} />
         <h2 className="text-2xl mt-3">Bekasyl</h2>
@@ -23,7 +23,7 @@ const Navbar = () => {
         className={cn(
           isOpen
             ? "flex flex-col h-screen w-full gap-4 bg-black text-white"
-            : "hidden"
+            : "hidden lg:flex gap-5 items-center justify-center"
         )}
       >
         {navLinks.map((link) => (
@@ -44,10 +44,7 @@ const Navbar = () => {
         </Button>
       </div>
 
-      <Menu
-        onClick={handleClick}
-        className="inline-block cursor-pointer lg:hidden"
-      />
+      <Menu className="inline-block cursor-pointer lg:hidden" />
     </nav>
   );
 };

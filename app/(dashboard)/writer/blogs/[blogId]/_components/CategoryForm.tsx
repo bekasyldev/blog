@@ -76,8 +76,8 @@ export const CategoryForm = ({
             <>Cancel</>
           ) : (
             <>
-              <Pencil className="h-4 w-4 mr-2" />
-              Edit category
+              <Pencil className="h-4 w-4 sm:mr-2 " />
+              <span className="hidden sm:flex">Edit category</span>
             </>
           )}
         </Button>

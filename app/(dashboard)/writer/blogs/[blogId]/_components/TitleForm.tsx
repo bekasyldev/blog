@@ -64,8 +64,8 @@ const TitleForm = ({ initialData, blogId }: TitleProps) => {
             <>Cancel</>
           ) : (
             <>
-              <Pencil className="h-4 w-4 mr-2" />
-              Edit title
+              <Pencil className="h-4 w-4 sm:mr-2" />
+              <span className="hidden sm:flex">Edit title</span>
             </>
           )}
         </Button>
