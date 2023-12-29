@@ -47,8 +47,8 @@ const CreateBlog = () => {
   };
 
   return (
-    <div className="max-w-5xl md:mx-auto flex items-center justify-center h-full mt-10 text-black">
-      <div className="space-y-3 bg-white p-5 rounded-md mx-10 md:mx-auto">
+    <div className="max-w-5xl md:mx-auto flex items-center justify-center h-[70vh] mt-10 text-black ">
+      <div className="space-y-3  p-5 rounded-md mx-10 md:mx-auto bg-gray-100">
         <h1 className="sm:text-2xl text-xl font-semibold">
           Title of your blog
         </h1>

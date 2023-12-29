@@ -1,50 +1,32 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { navLinks } from "@/constants";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
   return (
     <nav className="max-w-[1440px] flex justify-between items-center mx-auto relative py-5 px-6 lg:px-20 3xl:px-0">
-      <Link href={"/"} className="flex">
-        <Image src={"/cat.png"} alt="logo" width={40} height={40} />
-        <h2 className="text-2xl mt-3">Bekasyl</h2>
-      </Link>
-
-      <ul
-        className={cn(
-          isOpen
-            ? "flex flex-col h-screen w-full gap-4 bg-black text-white"
-            : "hidden lg:flex gap-5 items-center justify-center"
-        )}
-      >
-        {navLinks.map((link) => (
-          <Link href={link.href} key={link.key} className="text-md">
-            {link.label}
-          </Link>
-        ))}
-      </ul>
+      <div className="flex gap-x-10">
+        <Link href={"/"} className="flex">
+          <Image src={"/cat.png"} alt="logo" width={40} height={40} />
+          <h2 className="text-2xl mt-3 font-semibold">Bekasyl</h2>
+        </Link>
+        <ul className={"hidden lg:flex gap-5 items-end justify-center mb-1"}>
+          {navLinks.map((link) => (
+            <Link href={link.href} key={link.key} className="text-md">
+              {link.label}
+            </Link>
+          ))}
+        </ul>
+      </div>
 
       <div className="lg:flex lg:items-center hidden space-x-3">
         <Link href={"/writer/create"}>
-          <Button className="bg-green-500 hover:bg-green-700 text-white">
-            Write a blog
-          </Button>
+          <Button className="text-white">Write a Blog</Button>
         </Link>
-        <Button className="bg-white hover:bg-slate-500 hover:text-white  text-slate-950">
+        <Button className="bg-purple-600  hover:bg-purple-700 text-white">
           Subcribe
         </Button>
       </div>
-
-      <Menu className="inline-block cursor-pointer lg:hidden" />
     </nav>
   );
 };
