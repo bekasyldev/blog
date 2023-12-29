@@ -7,7 +7,6 @@ const Navbar = () => {
     <nav className="max-w-[1440px] flex justify-between items-center mx-auto relative py-5 px-6 lg:px-20 3xl:px-0">
       <div className="flex gap-x-10">
         <Link href={"/"} className="flex">
-          <Image src={"/cat.png"} alt="logo" width={40} height={40} />
           <h2 className="text-2xl mt-3 font-semibold">Bekasyl</h2>
         </Link>
         <ul className={"hidden lg:flex gap-5 items-end justify-center mb-1"}>
@@ -16,6 +15,14 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          <a
+            className="text-md"
+            href="https://bekasylportfolio.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            About Me
+          </a>
         </ul>
       </div>
 
